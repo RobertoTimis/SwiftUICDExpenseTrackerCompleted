@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5A551D612687D9A2004D117B /* SecondTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A551D602687D9A2004D117B /* SecondTest.swift */; };
+		5A81A04626891DC200721E02 /* ThirdTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A81A04526891DC200721E02 /* ThirdTest.swift */; };
 		5AC66A422687A5B700BA28AA /* TestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC66A412687A5B700BA28AA /* TestBase.swift */; };
 		5AC66A452687A65F00BA28AA /* FirstTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC66A442687A65F00BA28AA /* FirstTest.swift */; };
 		8BE1F53F244C04E90017E21D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE1F53E244C04E90017E21D /* AppDelegate.swift */; };
@@ -50,6 +51,7 @@
 
 /* Begin PBXFileReference section */
 		5A551D602687D9A2004D117B /* SecondTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTest.swift; sourceTree = "<group>"; };
+		5A81A04526891DC200721E02 /* ThirdTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdTest.swift; sourceTree = "<group>"; };
 		5AC66A362687A56E00BA28AA /* ExpenseTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExpenseTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AC66A3A2687A56E00BA28AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AC66A412687A5B700BA28AA /* TestBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBase.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			children = (
 				5AC66A442687A65F00BA28AA /* FirstTest.swift */,
 				5A551D602687D9A2004D117B /* SecondTest.swift */,
+				5A81A04526891DC200721E02 /* ThirdTest.swift */,
 			);
 			path = UITests;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AC66A422687A5B700BA28AA /* TestBase.swift in Sources */,
+				5A81A04626891DC200721E02 /* ThirdTest.swift in Sources */,
 				5A551D612687D9A2004D117B /* SecondTest.swift in Sources */,
 				5AC66A452687A65F00BA28AA /* FirstTest.swift in Sources */,
 			);

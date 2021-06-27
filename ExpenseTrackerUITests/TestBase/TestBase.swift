@@ -6,6 +6,10 @@
 //  Copyright © 2021 Alfian Losari. All rights reserved.
 //
 
+/**
+ Class TestBase is used as a parent for our automated tests since it holds all functions and the setup for them.
+ I added marks to categorise functions  in order to be more readable.
+ */
 import Foundation
 import XCTest
 
@@ -60,24 +64,45 @@ class TestBase: XCTestCase {
     
     func checkAndClickTableButton(_ identifier: String, _ identifier1: String) {
         XCTAssert(app.tables.buttons[identifier].waitForExistence(timeout: 3))
+        XCTAssert(app.tables.buttons[identifier].exists)
         app.tables.buttons[identifier1].tap()
+    }
+    
+    func clickRadioButtons(_ identifier: Int, _ identifier1: Int) {
+        if app.buttons.element(boundBy: identifier).isEnabled {
+        app.buttons.element(boundBy: identifier1).tap()
+        } else {
+        app.buttons.element(boundBy: identifier).tap()
+        }
     }
  
     // MARK: - Text
     
-    func clickTextField(_ identifier: String) {
+    func clickInputField(_ identifier: String) {
+        if app.tables.textFields[identifier].exists,
+        app.tables.textFields[identifier].isHittable {
         app.tables.textFields[identifier].tap()
-       }
+        } else {
+            app.searchFields[identifier].tap()
+        }
+    }
     
     func enterTextField(_ identifier: String, _ identifier1: String) {
         XCTAssert(app.tables.textFields[identifier].waitForExistence(timeout: 3))
-        clickTextField(identifier)
+        clickInputField(identifier)
         app.typeText(identifier1)
-        app.buttons["return"].tap()
+        checkAndClickButton("return", "return")
     }
     
     func deleteText(_ identifier: String, _ identifier1: Int) {
         let deleteInput = app.keys
         deleteInput[identifier].tap(withNumberOfTaps: identifier1, numberOfTouches: 1)
+    }
+    
+    func enterSearchField(_ identifier: String, _ identifier1: String) {
+        XCTAssert(app.searchFields[identifier].waitForExistence(timeout: 3))
+        clickInputField(identifier)
+        app.typeText(identifier1)
+        checkAndClickButton("search", "search")
     }
 }
